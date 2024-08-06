@@ -1,0 +1,50 @@
+Loading trainer: SCP
+Loading dataset: DescribableTextures
+Reading split from /home/ranwang/Data/CoOp-main/datasets/data/dtd/split_zhou_DescribableTextures.json
+Building transform_train
++ random resized crop (size=(224, 224), scale=(0.08, 1.0))
++ random flip
++ to torch tensor of range [0, 1]
++ normalization (mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+Building transform_test
++ resize the smaller edge to 224
++ 224x224 center crop
++ to torch tensor of range [0, 1]
++ normalization (mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])
+---------  -------------------
+Dataset    DescribableTextures
+# classes  47
+# train_x  2,820
+# val      1,128
+# test     1,692
+---------  -------------------
+Loading CLIP (backbone: ViT-B/16)
+Building custom CLIP
+Independent V-L design
+Initial text context: "a photo of a"
+Number of context words (tokens) for Language prompting: 4
+Number of context words (tokens) for Vision prompting: 4
+Turning off gradients in both the image and the text encoder
+Parameters to be updated: {'prompt_learner.ctx'}
+Parameters count: 1
+Loading evaluator: Classification
+----------------------------------------------------
+Loading dataset: DescribableTextures
+optim is  SGD (
+Parameter Group 0
+    dampening: 0
+    initial_lr: 0.0025
+    lr: 1e-05
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0.0001
+)
+classes is  47
+Evaluate on the *test* set
+=> result
+* total: 1,692
+* correct: 746
+* accuracy: 44.1%
+* error: 55.9%
+* macro_f1: 40.1%
+Total training time: 52.10 seconds
