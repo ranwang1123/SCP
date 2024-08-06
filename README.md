@@ -46,9 +46,13 @@ cd ..
 * Clone SCP code repository and install requirements
 ```bash
 # Clone SCP code base
-git clone https://github.com/muzairkhattak/SCP.git
+git clone https://github.com/ranwang1123/SCP.git
 
 cd SCP/
+
+# Change TTA Testing
+Replace `./Dassl.pytorch/dassl/engine/trainer.py` with `SCP/TTA/trainer.py`
+
 # Install requirements
 pip install -r requirements.txt
 
