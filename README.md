@@ -301,10 +301,10 @@ Make sure you change the path in `DATA` and run the commands under the main dire
 
 ```bash
 for dataset in caltech101 dtd eurosat fgvc_aircraft food101 oxford_flowers oxford_pets stanford_cars sun397 ucf101; do
-  bash scripts/scp/base2new_train2.sh $dataset 2 /path/to/datasets/data;
-  bash scripts/scp/base2new_test2.sh $dataset 2 /path/to/datasets/data;
+  bash scripts/scp/xd_test.sh $dataset 2 /path/to/datasets/data;
 done
 ```
+The result will be shown in ./output
 
 ## Citation
 
